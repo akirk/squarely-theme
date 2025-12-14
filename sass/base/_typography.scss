@@ -24,10 +24,12 @@ h1 {
 
 h2 {
     @include font-size(1.75);
+    line-height: 1.4;
 }
 
 h3 {
     @include font-size(1.375);
+    line-height: 1.4;
 }
 
 h4 {
