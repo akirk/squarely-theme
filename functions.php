@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 add_action( 'after_setup_theme', 'slightly_setup' );
 
 function slightly_setup() {
-	load_theme_textdomain( 'slightly', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'slightly-blocked', get_template_directory() . '/languages' );
 	add_theme_support( 'automatic-feed-links' );
 	add_theme_support( 'title-tag' );
 	add_theme_support( 'post-thumbnails' );
@@ -31,6 +31,11 @@ function slightly_setup() {
 	add_theme_support( 'custom-logo' );
 	add_theme_support( 'editor-styles' );
 	add_editor_style( 'style.css' );
+
+	register_nav_menus( array(
+		'main-menu'   => __( 'Main Menu', 'slightly-blocked' ),
+		'footer-menu' => __( 'Footer Menu', 'slightly-blocked' ),
+	) );
 }
 
 /**
@@ -51,8 +56,8 @@ function slightly_register_user_meta() {
 	$sanitize = fn( $value ) => in_array( $value, [ 'light', 'dark' ], true ) ? $value : '';
 
 	register_meta( 'user', 'slightly-color-scheme', array(
-		'label'             => __( 'Color Scheme', 'slightly' ),
-		'description'       => __( 'Stores the preferred color scheme for the site.', 'slightly' ),
+		'label'             => __( 'Color Scheme', 'slightly-blocked' ),
+		'description'       => __( 'Stores the preferred color scheme for the site.', 'slightly-blocked' ),
 		'default'           => '',
 		'sanitize_callback' => $sanitize,
 		'show_in_rest'      => true,
