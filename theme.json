@@ -64,27 +64,27 @@
 			"fontSizes": [
 				{
 					"slug": "small",
-					"size": "14px",
+					"size": "0.875rem",
 					"name": "Small"
 				},
 				{
 					"slug": "medium",
-					"size": "16px",
+					"size": "1rem",
 					"name": "Medium"
 				},
 				{
 					"slug": "large",
-					"size": "22px",
+					"size": "1.375rem",
 					"name": "Large"
 				},
 				{
 					"slug": "x-large",
-					"size": "28px",
+					"size": "1.75rem",
 					"name": "Extra Large"
 				},
 				{
 					"slug": "xx-large",
-					"size": "38px",
+					"size": "2.4rem",
 					"name": "Huge"
 				}
 			]
